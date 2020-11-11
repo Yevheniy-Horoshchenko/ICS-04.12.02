@@ -5,7 +5,7 @@
 def get_prices():
     """ повертає вміст файла 'prices.txt` у вигляді списка
     """
-    with open('./data/prices.txt') as prices_file:
+    with open('./data/prices.txt',encoding="utf8") as prices_file:
         from_file = prices_file.readlines()
 
     # накопичувач цін
@@ -33,20 +33,20 @@ def show_prices(prices):
     
 
     # задати інтервал виводу
-    price_code_from = input("З якого кода ціна? ")
-    price_code_to   = input("По який код ціна? ")
+    price_code_from = input("З якого кода продукт? ")
+    price_code_to   = input("По який код продукт? ")
     
     # накопичує кількість виведених рядків
     kol_lines = 0
 
     for price in prices:
         if  price_code_from  <= price[0] <= price_code_to:
-            print("код: {:3} середня ціна за 2007 рік: {:7} 2011 рік: {:7} 2017 рік: {:6}назва ринку: {:10}".format(price[0], price[1], price[3], price[4],price[5]))
+            print("код: {:3} сер.ціна за 2007:{:4} 2008:{:7} 2011:{:7} 2017:{:7} Ринок:{:7}".format(price[0], price[1],price[2],price[3],price[4],price[5]))
             kol_lines += 1
 
     # перевірити чи був вивід хоча б одного рядка
     if kol_lines == 0:
-        print("По вашому запиту цін не знайдено!")
+        print("По вашому запиту продуктів не знайдено!")
     
 
 prices = get_prices()
