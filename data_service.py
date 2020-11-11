@@ -5,7 +5,7 @@
 def get_prices():
     """ повертає вміст файла 'prices.txt` у вигляді списка
     """
-    with open('./data/prices.txt',encoding="utf8") as prices_file:
+    with open('./data/prices.txt') as prices_file:
         from_file = prices_file.readlines()
 
     # накопичувач цін
@@ -21,7 +21,7 @@ def get_products():
     """повертає вміст файла 'products.txt' у вигляді списка
     """
  
-    with open ('./data/products.txt',encoding='utf8') as products_file:
+    with open ('./data/products.txt') as products_file:
         from_file = products_file.readlines()
 
     products_list = []
