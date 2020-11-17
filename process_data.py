@@ -1,6 +1,8 @@
 """аналіз зміни рівня цін на продовольчі товари
 """
 
+from data_service import get_prices, get_products
+
 analiz = {
 
     'rinok_name'   : '',   #найменування ринку
@@ -15,5 +17,7 @@ analiz = {
     'vidsotok_2011': 0.0   #у % до 2011
 
 
-
 }
+
+print(get_prices())
+print(get_products())
