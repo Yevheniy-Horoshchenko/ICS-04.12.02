@@ -29,6 +29,8 @@ def get_products():
     for line in from_file:
         line_list = line.split()
         products_list.append(line_list)
+
+    return products_list
 def show_prices(prices):
     
 
@@ -58,7 +60,7 @@ def show_products(products):
 
     for product in products:
         if  product_code_from  <= product[0] <= product_code_to:
-            print("код: {:3} назва продукту: {:3} одиниці вимірювання {:3}".format(product[0],product[1],product[2]))
+            print("код: {:3} назва продукту: {:5} одиниці вимірювання {:11}".format(product[0],product[1],product[2]))
             kol_lines += 1
 
     if kol_lines == 0:
