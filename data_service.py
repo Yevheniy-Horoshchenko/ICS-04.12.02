@@ -60,7 +60,7 @@ def show_products(products):
 
     for product in products:
         if  product_code_from  <= product[0] <= product_code_to:
-            print("код: {:3} назва продукту: {:5} одиниці вимірювання {:11}".format(product[0],product[1],product[2]))
+            print("код: {:3} назва продукту: {:5} одиниці вимірювання {:6}".format(product[0],product[1],product[2]))
             kol_lines += 1
 
     if kol_lines == 0:
