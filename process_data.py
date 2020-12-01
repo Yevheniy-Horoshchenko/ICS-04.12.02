@@ -42,7 +42,7 @@ def create_analiz():
             if product[0] == product_code:
                 return product[1]
         
-        return "*** код продукту не знайдений"
+        return "код не знайдений"
     # накопичувач аналізів 
     analiz_list = []
 
