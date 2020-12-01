@@ -69,7 +69,5 @@ def create_analiz():
 
 result = create_analiz()
 
-for r in result:
-    print(r)
 
 
