@@ -72,7 +72,7 @@ def write_analiz(analiz_list):
         zajavka_list ([type]): список заявок
     """
 
-    with open('.\data\analiz.txt', 'w') as analiz_file:
+    with open('./data/analiz.txt', 'w') as analiz_file:
         for analiz in analiz_list:
             line = \
                analiz['nazva_rinku'] + ';' +             \
