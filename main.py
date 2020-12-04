@@ -5,7 +5,7 @@
 
 import os
 from process_data import create_analiz
-
+from data_service import show_products, show_prices, get_products,get_prices
 
 MAIN_MENU = \
 """
@@ -109,4 +109,19 @@ while True:
     elif command_number == '1':
         analiz_list = create_analiz()
         show_analiz(analiz_list)
+        input(STOP_MESSAGE)
+
+    elif command_number == '2':
+        analiz_list = create_analiz()
+        write_analiz(analiz_list)
+        input(STOP_MESSAGE)
+        
+    elif command_number == '3':
+        products = get_products()
+        show_products(products)
+        input(STOP_MESSAGE)
+        
+    elif command_number == '4':
+        prices = get_prices()
+        show_prices(prices)
         input(STOP_MESSAGE)
