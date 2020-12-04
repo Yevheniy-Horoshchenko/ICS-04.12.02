@@ -60,7 +60,7 @@ def create_analiz():
         analiz_lvl['2011_price']       = price[3]
         analiz_lvl['vidsotok_do_2008'] = float(analiz_lvl['2008_price'])*100 / float(analiz_lvl['2008_price'])+ 100
         analiz_lvl['2017_price']       = price[4]
-        analiz_lvl['vidsotok_do_2011'] = float(analiz_lvl['2011_price']) / float(analiz_lvl['2017_price']) + 100
+        analiz_lvl['vidsotok_do_2011'] = float(analiz_lvl['2011_price'])*100 / float(analiz_lvl['2017_price']) + 100
         
         
         analiz_list.append(analiz_lvl)
