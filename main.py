@@ -65,7 +65,7 @@ def show_analiz(analiz_list):
     print(FOOTER)
 
 
-def write_zajavka(zajavka_list):
+def write_analiz(analiz_list):
     """записує список заявок у текстовий файл
 
     Args:
@@ -75,16 +75,16 @@ def write_zajavka(zajavka_list):
     with open('.\data\analiz.txt', 'w') as analiz_file:
         for analiz in analiz_list:
             line = \
-               analiz['nazva_rinku']  + ';' +             \
-               analiz['nazva_tovaru'] + ';' +             \
-               analiz['system_units'] + ';' +             \
-               str(analiz['2007_price']) + ';' +          \
-               str(analiz['2008_price'])  + ';' +         \
-               str(analiz['vidsotok_do_2007'])  +         \
-               str(analiz['2011_price']) + ';' +          \
-               str(analiz['vidsotok_do_2008']) + ';' +    \
-               str(analiz['2017_price']) + ';' +          \
-               str(analiz['vidsotok_do_2011']) +   '\n' 
+               analiz['nazva_rinku'] + ';' +             \
+               analiz['nazva_tovaru'] + ';' +            \
+               analiz['system_units'] + ';' +            \
+               str(analiz['2007_price']) + ';' +         \
+               str(analiz['2008_price']) + ';' +         \
+               str(analiz['vidsotok_do_2007'])  +        \
+               str(analiz['2011_price']) + ';' +         \
+               str(analiz['vidsotok_do_2008']) + ';' +   \
+               str(analiz['2017_price']) + ';' +         \
+               str(analiz['vidsotok_do_2011']) + '\n' 
                
             analiz_file.write(line)  
             
